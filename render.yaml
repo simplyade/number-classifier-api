@@ -4,6 +4,10 @@ services:
     name: Hng_stage_1
     env: python
     environment:
-      SETTINGS_MODULE: Hng_stage_1.Hng_stage_1.settings
+    environment:
+  DJANGO_SETTINGS_MODULE:Hng_stage_1.Hng_stage_1.settings
+  PYTHONPATH:Hng_stage_1
+    
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn -w 4 -b 0.0.0.0:8000 Hng_stage_1.Hng_stage_1.wsgi:application
+    
