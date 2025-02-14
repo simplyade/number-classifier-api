@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: Hng_stage_1
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn Hng_stage_1.wsgi:application
+    ports:
+      - 8000
