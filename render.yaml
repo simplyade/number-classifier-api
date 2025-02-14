@@ -1,3 +1,4 @@
+
 services:
   - type: web
     name: Hng_stage_1
@@ -5,7 +6,6 @@ services:
     environment:
       SETTINGS_MODULE: Hng_stage_1.Hng_stage_1.settings
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn Hng_stage_1.Hng_stage_1.wsgi:application
+    startCommand: gunicorn /Hng_stage_1/Hng_stage_1/wsgi:application
     ports:
       - 8000
-
